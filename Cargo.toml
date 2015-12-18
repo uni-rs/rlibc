@@ -13,3 +13,11 @@ memmove, memset and memcmp. This is designed for use in freestanding
 environments where another libc does not exist, since rustc may
 implicitly insert calls to such functions.
 """
+
+[features]
+
+with-core = [ "core" ]
+
+[dependencies]
+
+core = { path = "../../rust-libs/core", optional = true }
